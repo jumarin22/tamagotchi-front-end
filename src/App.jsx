@@ -6,6 +6,7 @@ import { ShowPetList } from './components/ShowPetList'
 
 export function App() {
   const [petResults, setPetResults] = useState([])
+  const [newPetName, setNewPetName] = useState('')
 
   useEffect(async () => {
     const response = await axios.get(
@@ -13,6 +14,11 @@ export function App() {
     )
     setPetResults(response.data)
   }, [])
+
+  function handleCreateNewPet(e) {
+    e.preventDefault()
+    console.log(`You wrote ${newPetName}`)
+  }
 
   return (
     <>
@@ -40,8 +46,14 @@ export function App() {
         </Route>
         <Route exact path="/1">
           <h4>What is your new pet's name?</h4>
-          <form>
-            <input type="text" id="pName" />
+          <form onSubmit={handleCreateNewPet}>
+            <input
+              type="text"
+              id="pName"
+              placeholder="Enter pet name"
+              value={newPetName}
+              onChange={e => setNewPetName(e.target.value)}
+            />
           </form>
         </Route>
         <Route exact path="/2">
