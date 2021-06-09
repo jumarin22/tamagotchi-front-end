@@ -15,9 +15,24 @@ export function App() {
     setPetResults(response.data)
   }, [])
 
-  function handleCreateNewPet(e) {
+  async function handleCreateNewPet(e) {
     e.preventDefault()
-    console.log(`You wrote ${newPetName}`)
+    if (newPetName == '') {
+      alert('You must enter a pet name!')
+    } else {
+      const response = await axios.post(
+        `https://tamagotchi-justin.herokuapp.com/api/Pets/`,
+        {
+          name: newPetName,
+        }
+      )
+      if (response.status === 201) {
+        const newPet = response.data
+        const newPets = [newPet, ...petResults]
+        setPetResults(newPets)
+      }
+      alert(`Created new pet ${newPetName}!`)
+    }
   }
 
   return (
