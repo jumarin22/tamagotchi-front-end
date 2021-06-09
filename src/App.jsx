@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, Route, Switch } from 'react-router-dom'
+import { ShowPetList } from './components/ShowPetList'
 
 export function App() {
   const [petResults, setPetResults] = useState([])
@@ -20,7 +21,7 @@ export function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Go Home</Link>
+              <Link to="/">See All Pets</Link>
             </li>
             <li>
               <Link to="/1">Create New Pet</Link>
@@ -33,23 +34,15 @@ export function App() {
       </header>
       <Switch>
         <Route exact path="/">
-          <div>
-            {petResults.map(function (pet) {
-              return (
-                <article key={pet.id}>
-                  <h3>{pet.name}</h3>
-                  <section>
-                    <p>{pet.birthday}</p>
-                    <p>{pet.hungerLevel}</p>
-                    <p>{pet.happinessLevel}</p>
-                  </section>
-                </article>
-              )
-            })}
+          <div className="main">
+            <ShowPetList pet={petResults} />
           </div>
         </Route>
         <Route exact path="/1">
-          What is your new pet's name?
+          <h4>What is your new pet's name?</h4>
+          <form>
+            <input type="text" id="pName" />
+          </form>
         </Route>
         <Route exact path="/2">
           Page 2
