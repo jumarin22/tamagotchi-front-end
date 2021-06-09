@@ -10,3 +10,24 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
+article {
+  border: black thin solid;
+  display: flex wrap;
+  width: 50%;
+}
+
+h3 {
+  text-align: center;
+  width: 100%;
+}
+
+section {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+p {
+  width: 33%;
+}
