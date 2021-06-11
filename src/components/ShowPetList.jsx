@@ -1,7 +1,7 @@
 // @ts-nocheck
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link, Route, Switch, useHistory, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export function ShowPetList() {
   const [petResults, setPetResults] = useState([])

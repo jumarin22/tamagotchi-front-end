@@ -1,6 +1,4 @@
 // @ts-nocheck
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import { Link, Route, Switch, useHistory, useParams } from 'react-router-dom'
 import { CreatePet } from './components/CreatePet'
 import { ShowPetList } from './components/ShowPetList'

@@ -28,7 +28,11 @@ nav {
   font-weight: bold;
 }
 
-nav > a:visited {
+nav a {
+  color: black;
+}
+
+nav a:visited {
   color: black;
 }
 
@@ -46,8 +50,10 @@ article {
   box-shadow: hsl(300, 100%, 10%) 0.3rem 0.3rem 0.3rem;
 }
 
-p > a,
-a:visited {
+p a {
+  color: white;
+}
+p a:visited {
   color: white;
 }
 

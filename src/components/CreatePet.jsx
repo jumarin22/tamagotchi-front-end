@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useHistory, useParams } from 'react-router'
+import { useState } from 'react'
+import { useHistory } from 'react-router'
 import axios from 'axios'
 
 export function CreatePet() {
