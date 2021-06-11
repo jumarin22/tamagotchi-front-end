@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, Route, Switch, useHistory, useParams } from 'react-router-dom'
@@ -14,18 +13,22 @@ export function ShowPetList() {
     setPetResults(response.data)
   }, [])
 
+  function parseDate(birthday) {
+    return birthday.substr(0, 10)
+  }
+
   return petResults.map(function (pet) {
     return (
       <article key={pet.id}>
-        <h3>{pet.name}</h3>
-        <section>
-          <p>{pet.birthday}</p>
-          <p>{pet.hungerLevel}</p>
-          <p>{pet.happinessLevel}</p>
-          <p>
-            <Link to={`/${pet.id}`}>Select Pet</Link>
-          </p>
-        </section>
+        <h2>{pet.name}</h2>
+        <div className="list-display">
+          <p>Birthday: {parseDate(pet.birthday)}</p>
+          <p>Hunger Level: {pet.hungerLevel}</p>
+          <p>Happiness Level: {pet.happinessLevel}</p>
+        </div>
+        <p className="link">
+          <Link to={`/${pet.id}`}>Select Pet</Link>
+        </p>
       </article>
     )
   })

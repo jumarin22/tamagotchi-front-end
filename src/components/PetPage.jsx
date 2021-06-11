@@ -69,18 +69,26 @@ export function PetPage() {
     }
   }
 
+  function parseDate(birthday) {
+    return birthday.substr(0, 10)
+  }
+
   return (
     <article key={petItem.id}>
-      <h3>{petItem.name}</h3>
-      <section>
-        <p>{petItem.birthday}</p>
-        <p>{petItem.hungerLevel}</p>
-        <p>{petItem.happinessLevel}</p>
-        <button onClick={feedPet}>Feed Pet</button>
-        <button onClick={playPet}>Play with Pet</button>
-        <button onClick={scoldPet}>Scold Pet</button>
-        <button onClick={deletePet}>Delete Pet</button>
-      </section>
+      <h2>{petItem.name}</h2>
+      <div className="display">
+        <div className="pet-info">
+          <p>Birthday: {parseDate(petItem.birthday)}</p>
+          <p>Hunger Level: {petItem.hungerLevel}</p>
+          <p>Happiness Level: {petItem.happinessLevel}</p>
+        </div>
+        <div className="menu">
+          <button onClick={feedPet}>Feed Pet</button>
+          <button onClick={playPet}>Play with Pet</button>
+          <button onClick={scoldPet}>Scold Pet</button>
+          <button onClick={deletePet}>Delete Pet</button>
+        </div>
+      </div>
     </article>
   )
 }

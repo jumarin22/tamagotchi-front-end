@@ -17,7 +17,6 @@ export function CreatePet() {
           name: newPetName,
         }
       )
-      alert(`Created new pet ${newPetName}!`)
       history.push('/')
       setNewPetName('')
     }
@@ -25,12 +24,12 @@ export function CreatePet() {
 
   return (
     <>
-      <h4>What is your new pet's name?</h4>
+      <h3>What is your new pet's name?</h3>
       <form onSubmit={handleCreateNewPet}>
         <input
           type="text"
           id="pName"
-          placeholder="Enter pet name"
+          placeholder="Type name and press enter"
           value={newPetName}
           onChange={e => setNewPetName(e.target.value)}
         />

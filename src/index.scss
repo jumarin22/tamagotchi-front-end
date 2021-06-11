@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
 }
@@ -7,27 +9,127 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 2rem;
   min-height: 100%;
+  background-color: hsl(300, 100%, 33%);
+  font-family: 'Varela Round', sans-serif;
+}
+
+header {
+  text-align: center;
+  color: white;
+  text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+nav > a:visited {
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 article {
-  border: black thin solid;
-  display: flex wrap;
-  width: 50%;
+  margin: 1rem;
+  border: hsl(300, 100%, 25%) 1rem solid;
+  border-radius: 1rem;
+  background-color: purple;
+  box-shadow: hsl(300, 100%, 10%) 0.3rem 0.3rem 0.3rem;
+}
+
+p > a,
+a:visited {
+  color: white;
+}
+
+.list-display {
+  background-color: hsl(300, 100%, 45%);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.link {
+  text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
+}
+
+h2 {
+  margin-top: 0;
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-color: purple;
+  max-height: fit-content;
+  max-width: 100%;
+  text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
+}
+
+.display {
+  margin-top: 0;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  background-color: hsl(300, 100%, 45%);
+  justify-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  margin: 1rem;
+  text-align: left;
+}
+
+.link {
+  text-align: center;
 }
 
 h3 {
   text-align: center;
-  width: 100%;
 }
 
-section {
-  text-align: center;
+form {
+  background-color: purple;
+  padding: 0.3rem;
+  margin: auto;
+  border: thick solid purple;
+  border-radius: 1rem;
+  max-width: max-content;
+}
+
+input {
+  background-color: purple;
+  border: none;
+  color: white;
+}
+
+.pet-info {
+  align-self: center;
+}
+
+.menu {
+  margin: 1rem;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  max-width: 75%;
 }
 
-p {
-  width: 33%;
+button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: hsl(300, 100%, 25%);
+  text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
 }

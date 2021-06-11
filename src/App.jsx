@@ -14,14 +14,8 @@ export function App() {
       <header>
         <h1>Petagotchi</h1>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">See All Pets</Link>
-            </li>
-            <li>
-              <Link to="/create">Create New Pet</Link>
-            </li>
-          </ul>
+          <Link to="/">See All Pets</Link> &emsp;
+          <Link to="/create">Create New Pet</Link>
         </nav>
       </header>
       <Switch>
@@ -34,7 +28,9 @@ export function App() {
           <CreatePet />
         </Route>
         <Route path="/:id">
-          <PetPage />
+          <div className="main">
+            <PetPage />
+          </div>
         </Route>
         <Route path="*">Not Found</Route>
       </Switch>
