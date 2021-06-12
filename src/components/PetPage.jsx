@@ -9,9 +9,9 @@ export function PetPage() {
   const [petItem, setPetItem] = useState({
     id: undefined,
     name: 'Loading Pet...',
-    birthday: '',
-    hungerLevel: undefined,
-    happinessLevel: undefined,
+    birthday: '0000-00-00',
+    hungerLevel: -99,
+    happinessLevel: -99,
     lastInteractedWithDate: '',
     isDead: false,
   })
