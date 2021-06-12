@@ -34,7 +34,7 @@ export function ShowPetList() {
             </p>
           </div>
           <p className="link">
-            <Link to={`/${pet.id}`}>Select Pet</Link>
+            <Link to={`/${pet.id}`}>&#8729;&#8729;&#8729;</Link>
           </p>
         </article>
       </div>
