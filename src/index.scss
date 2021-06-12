@@ -120,6 +120,7 @@ p.link {
 h2 {
   text-align: center;
   margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .display {
@@ -148,6 +149,11 @@ h3 {
   text-align: center;
   color: white;
   text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
+}
+
+.list-name {
+  padding-top: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 form {
@@ -192,7 +198,7 @@ button {
   border-radius: 1rem;
   box-shadow: hsl(350, 100%, 13%) 0.3rem 0.3rem 0.3rem 0.3rem;
   padding: 5rem;
-  padding-top: 1rem;
+  padding-top: 1em;
   padding-bottom: 2rem;
 }
 

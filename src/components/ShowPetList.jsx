@@ -22,7 +22,7 @@ export function ShowPetList() {
     return (
       <div class="egg" key={pet.id} onClick={() => history.push(`/${pet.id}`)}>
         <article>
-          <h2>{pet.name}</h2>
+          <h2 className="list-name">{pet.name}</h2>
           <div className="list-display">
             <p className="bit">
               <span class="outline">🎂</span>&emsp;{parseDate(pet.birthday)}
