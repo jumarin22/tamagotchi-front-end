@@ -11,6 +11,7 @@ export function App() {
     <>
       <header>
         <h1>Petagotchi</h1>
+        <p className="header">(click an egg to interact!)</p>
         <nav>
           <Link to="/">See All Pets</Link> &emsp;
           <Link to="/create">Create New Pet</Link>

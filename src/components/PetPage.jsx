@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useHistory, useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 
 export function PetPage() {
   const history = useHistory()
@@ -78,9 +79,17 @@ export function PetPage() {
       <h2>{petItem.name}</h2>
       <div className="display">
         <div className="pet-info">
-          <p>Birthday: {parseDate(petItem.birthday)}</p>
-          <p>Hunger Level: {petItem.hungerLevel}</p>
-          <p>Happiness Level: {petItem.happinessLevel}</p>
+          <p>
+            <span class="grey">Birthday:</span> {parseDate(petItem.birthday)}
+          </p>
+          <p>
+            {' '}
+            <span class="grey">Hunger Level:</span> {petItem.hungerLevel}
+          </p>
+          <p>
+            {' '}
+            <span class="grey">Happiness Level: </span> {petItem.happinessLevel}
+          </p>
         </div>
         <div className="menu">
           <button onClick={feedPet}>Feed</button>
@@ -89,6 +98,9 @@ export function PetPage() {
           <button onClick={deletePet}>Delete</button>
         </div>
       </div>
+      <p className="bottom">
+        <Link to={`/`}>&#8592; back to list</Link>
+      </p>
     </article>
   )
 }

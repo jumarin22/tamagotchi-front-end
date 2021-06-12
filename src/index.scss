@@ -24,32 +24,41 @@ body {
 
 header {
   text-align: center;
-  background-color: hsla(350, 100%, 33%);
+  background-color: hsl(350, 100%, 33%);
 }
 
 h1 {
   color: white;
   text-shadow: hsl(350, 100%, 13%) 0.1rem 0.1rem;
   margin-top: 0;
+  margin-bottom: 0.5rem;
   padding-top: 0.3rem;
+}
+
+.header {
+  color: hsla(350, 100%, 83%);
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 nav {
   text-shadow: hsl(350, 100%, 13%) 0.1rem 0.1rem;
   font-weight: bold;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 nav a {
-  color: hsla(350, 100%, 83%);
+  color: white;
+  text-decoration: none;
 }
 
 nav a:visited {
-  color: hsla(350, 100%, 83%);
+  color: white;
+  text-decoration: none;
 }
 
 .body {
-  margin-top: 0;
+  margin-top: 0.3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -61,7 +70,7 @@ nav a:visited {
   margin-top: 0;
   display: flex;
   width: 15rem;
-  height: 19rem;
+  height: 18rem;
   background-color: hsl(16, 93%, 53%);
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   box-shadow: hsl(350, 100%, 13%) 0.3rem 0.3rem 0.3rem 0.3rem;
@@ -74,9 +83,6 @@ article {
   word-wrap: break-word;
   max-width: 75%;
 }
-p {
-  width: max-content;
-}
 
 .outline {
   text-shadow: -0.09rem 0 black, 0 0.09rem black, 0.09rem 0 black,
@@ -84,37 +90,36 @@ p {
 }
 p a {
   color: white;
+  text-decoration: none;
 }
 p a:visited {
   color: white;
+  text-decoration: none;
 }
 
 p.link {
   margin: auto;
-  margin-top: 1rem;
   font-family: 'Varela Round', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .list-display {
   background-color: hsl(0, 0%, 75%);
   border-radius: 1rem;
   display: flex wrap;
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
   border-style: solid;
   border-width: 0.3rem;
   border-top-color: hsl(16, 77%, 33%);
   border-left-color: hsl(16, 77%, 33%);
   border-right-color: hsl(16, 77%, 66%);
   border-bottom-color: hsl(16, 77%, 66%);
-}
-
-.link {
-  justify-content: center;
+  line-height: 1rem;
 }
 
 h2 {
   text-align: center;
+  margin-bottom: 0.6rem;
 }
 
 .display {
@@ -129,17 +134,14 @@ h2 {
   border-right-color: hsl(16, 77%, 66%);
   border-bottom-color: hsl(16, 77%, 66%);
   max-width: fit-content;
+  line-height: 1.5rem;
 }
 
 p {
+  width: fit-content;
   margin: 1rem;
   text-align: left;
   font-family: 'Press Start 2P', cursive;
-}
-
-.link {
-  text-align: center;
-  margin-bottom: 0.5rem;
 }
 
 h3 {
@@ -165,13 +167,14 @@ input {
 
 .pet-info {
   align-self: center;
-  max-width: min-content;
+  max-width: max-content;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
   max-width: fit-content;
+  margin-top: 0.3rem;
 }
 
 button {
@@ -190,6 +193,7 @@ button {
   box-shadow: hsl(350, 100%, 13%) 0.3rem 0.3rem 0.3rem 0.3rem;
   padding: 5rem;
   padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .zoom h2 {
@@ -198,4 +202,15 @@ button {
 
 ::placeholder {
   color: black;
+}
+
+.bottom {
+  font-family: 'Varela Round', sans-serif;
+  margin: auto;
+  padding-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.grey {
+  color: hsl(0, 0%, 20%);
 }
