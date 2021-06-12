@@ -110,16 +110,16 @@ p.link {
   display: flex wrap;
   border-style: solid;
   border-width: 0.3rem;
-  border-top-color: hsl(16, 77%, 33%);
-  border-left-color: hsl(16, 77%, 33%);
-  border-right-color: hsl(16, 77%, 66%);
-  border-bottom-color: hsl(16, 77%, 66%);
+  border-top-color: hsl(16, 93%, 33%);
+  border-left-color: hsl(16, 93%, 33%);
+  border-right-color: hsl(16, 93%, 66%);
+  border-bottom-color: hsl(16, 793, 66%);
   line-height: 1rem;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
 }
 
 .display {
@@ -129,10 +129,10 @@ h2 {
   border-style: solid;
   border-width: 0.3rem;
   border-radius: 1rem;
-  border-top-color: hsl(16, 77%, 33%);
-  border-left-color: hsl(16, 77%, 33%);
-  border-right-color: hsl(16, 77%, 66%);
-  border-bottom-color: hsl(16, 77%, 66%);
+  border-top-color: hsl(16, 93%, 33%);
+  border-left-color: hsl(16, 93%, 33%);
+  border-right-color: hsl(16, 93%, 66%);
+  border-bottom-color: hsl(16, 793, 66%);
   max-width: fit-content;
   line-height: 1.5rem;
 }
@@ -207,7 +207,7 @@ button {
 .bottom {
   font-family: 'Varela Round', sans-serif;
   margin: auto;
-  padding-top: 1rem;
+  padding-top: 1.3rem;
   font-size: 1.3rem;
 }
 
