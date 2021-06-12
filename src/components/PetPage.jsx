@@ -74,7 +74,7 @@ export function PetPage() {
   }
 
   return (
-    <article key={petItem.id}>
+    <article key={petItem.id} className="zoom">
       <h2>{petItem.name}</h2>
       <div className="display">
         <div className="pet-info">
@@ -83,10 +83,10 @@ export function PetPage() {
           <p>Happiness Level: {petItem.happinessLevel}</p>
         </div>
         <div className="menu">
-          <button onClick={feedPet}>Feed Pet</button>
-          <button onClick={playPet}>Play with Pet</button>
-          <button onClick={scoldPet}>Scold Pet</button>
-          <button onClick={deletePet}>Delete Pet</button>
+          <button onClick={feedPet}>Feed</button>
+          <button onClick={playPet}>Play</button>
+          <button onClick={scoldPet}>Scold</button>
+          <button onClick={deletePet}>Delete</button>
         </div>
       </div>
     </article>

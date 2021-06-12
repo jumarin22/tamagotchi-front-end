@@ -16,22 +16,22 @@ export function App() {
           <Link to="/create">Create New Pet</Link>
         </nav>
       </header>
-      <Switch>
-        <Route exact path="/">
-          <div className="main">
+      <div className="body">
+        <Switch>
+          <Route exact path="/">
             <ShowPetList />
-          </div>
-        </Route>
-        <Route exact path="/create">
-          <CreatePet />
-        </Route>
-        <Route path="/:id">
-          <div className="main">
-            <PetPage />
-          </div>
-        </Route>
-        <Route path="*">Not Found</Route>
-      </Switch>
+          </Route>
+          <Route exact path="/create">
+            <CreatePet />
+          </Route>
+          <Route path="/:id">
+            <div className="main">
+              <PetPage />
+            </div>
+          </Route>
+          <Route path="*">Not Found</Route>
+        </Switch>
+      </div>
     </>
   )
 }

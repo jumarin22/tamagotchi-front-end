@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+root {
   font: 16px / 1 sans-serif;
 }
 
@@ -9,90 +9,132 @@ html {
 }
 
 body {
-  margin: 2rem;
+  margin: 0;
   min-height: 100%;
-  background-color: hsl(300, 100%, 33%);
   font-family: 'Varela Round', sans-serif;
+  background-image: radial-gradient(
+      hsla(350, 100%, 75%, 33%) 20%,
+      transparent 20%
+    ),
+    radial-gradient(hsla(350, 100%, 66%) 20%, transparent 20%);
+  background-color: hsl(350, 100%, 33%);
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
 }
 
 header {
   text-align: center;
-  color: white;
-  text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
+  background-color: hsla(350, 100%, 33%);
+}
+
+h1 {
+  color: hsla(350, 100%, 83%);
+  text-shadow: hsl(350, 100%, 13%) 0.1rem 0.1rem;
+  margin-top: 0;
+  padding-top: 0.3rem;
 }
 
 nav {
-  text-align: center;
-  margin-bottom: 1rem;
-  text-shadow: none;
+  text-shadow: hsl(350, 100%, 13%) 0.1rem 0.1rem;
   font-weight: bold;
+  padding-bottom: 3rem;
 }
 
 nav a {
-  color: black;
+  color: hsla(350, 100%, 83%);
 }
 
 nav a:visited {
-  color: black;
+  color: hsla(350, 100%, 83%);
 }
 
-.main {
+.body {
+  margin-top: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-article {
+.egg {
+  width: fit-content;
   margin: 1rem;
-  border: hsl(300, 100%, 25%) 1rem solid;
-  border-radius: 1rem;
-  background-color: purple;
-  box-shadow: hsl(300, 100%, 10%) 0.3rem 0.3rem 0.3rem;
+  margin-top: 0;
+  display: flex;
+  width: 15rem;
+  height: 19rem;
+  background-color: hsl(16, 83%, 53%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: hsl(350, 100%, 13%) 0.3rem 0.3rem 0.3rem 0.3rem;
+  justify-content: center;
 }
 
+article {
+  display: flex wrap;
+  align-self: center;
+  word-wrap: break-word;
+  max-width: 75%;
+}
+p {
+  width: max-content;
+}
+
+.outline {
+  text-shadow: -0.09rem 0 black, 0 0.09rem black, 0.09rem 0 black,
+    0 -0.09rem black;
+}
 p a {
-  color: white;
+  color: black;
 }
 p a:visited {
-  color: white;
+  color: black;
+}
+
+p.link {
+  margin: auto;
+  margin-top: 1rem;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .list-display {
-  background-color: hsl(300, 100%, 45%);
+  background-color: hsl(0, 0%, 75%);
   border-radius: 1rem;
-  padding: 1rem;
+  display: flex wrap;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-top-color: hsl(16, 77%, 33%);
+  border-left-color: hsl(16, 77%, 33%);
+  border-right-color: hsl(16, 77%, 66%);
+  border-bottom-color: hsl(16, 77%, 66%);
 }
 
 .link {
-  text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
+  justify-content: center;
 }
 
 h2 {
-  margin-top: 0;
-  color: white;
   text-align: center;
-  width: 100%;
-  background-color: purple;
-  max-height: fit-content;
-  max-width: 100%;
-  text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
 }
 
 .display {
-  margin-top: 0;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  background-color: hsl(0, 0%, 75%);
+  border-style: solid;
+  border-width: 0.3rem;
   border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
+  border-top-color: hsl(16, 77%, 33%);
+  border-left-color: hsl(16, 77%, 33%);
+  border-right-color: hsl(16, 77%, 66%);
+  border-bottom-color: hsl(16, 77%, 66%);
   max-width: fit-content;
-  background-color: hsl(300, 100%, 45%);
-  justify-items: center;
-  display: flex;
-  flex-direction: row;
 }
 
 p {
   margin: 1rem;
   text-align: left;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .link {
@@ -107,38 +149,53 @@ h3 {
 }
 
 form {
-  background-color: purple;
+  background-color: hsl(0, 0%, 75%);
   padding: 0.3rem;
   margin: auto;
-  border: thick solid purple;
+  border: thick solid hsl(0, 0%, 75%);
   border-radius: 1rem;
   max-width: max-content;
 }
 
 input {
-  background-color: purple;
+  background-color: hsl(0, 0%, 75%);
   border: none;
   color: white;
 }
 
 .pet-info {
   align-self: center;
+  max-width: min-content;
 }
 
 .menu {
-  margin: 1rem;
   display: flex;
   flex-direction: column;
-  max-width: 75%;
+  max-width: fit-content;
 }
 
 button {
   margin: 0.5rem;
   padding: 0.5rem;
-  color: white;
-  background-color: hsl(300, 100%, 25%);
-  text-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
-  border-radius: 1rem;
+  max-width: 10rem;
   border: none;
-  box-shadow: hsl(300, 100%, 10%) 0.1rem 0.1rem;
+  box-shadow: hsl(0, 0%, 23%) 0.1rem 0.1rem;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.zoom {
+  margin: auto;
+  background-color: hsl(16, 83%, 53%);
+  border-radius: 1rem;
+  box-shadow: hsl(350, 100%, 13%) 0.3rem 0.3rem 0.3rem 0.3rem;
+  padding: 5rem;
+  padding-top: 1rem;
+}
+
+.zoom h2 {
+  font-size: 2rem;
+}
+
+::placeholder {
+  color: black;
 }

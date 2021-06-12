@@ -23,7 +23,7 @@ export function CreatePet() {
   }
 
   return (
-    <>
+    <div className="create">
       <h3>What is your new pet's name?</h3>
       <form onSubmit={handleCreateNewPet}>
         <input
@@ -34,6 +34,6 @@ export function CreatePet() {
           onChange={e => setNewPetName(e.target.value)}
         />
       </form>
-    </>
+    </div>
   )
 }

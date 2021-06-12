@@ -14,22 +14,30 @@ export function ShowPetList() {
   }, [])
 
   function parseDate(birthday) {
-    return birthday.substr(0, 10)
+    return birthday.substr(5, 5)
   }
 
   return petResults.map(function (pet) {
     return (
-      <article key={pet.id}>
-        <h2>{pet.name}</h2>
-        <div className="list-display">
-          <p>Birthday: {parseDate(pet.birthday)}</p>
-          <p>Hunger Level: {pet.hungerLevel}</p>
-          <p>Happiness Level: {pet.happinessLevel}</p>
-        </div>
-        <p className="link">
-          <Link to={`/${pet.id}`}>Select Pet</Link>
-        </p>
-      </article>
+      <div class="egg">
+        <article key={pet.id}>
+          <h2>{pet.name}</h2>
+          <div className="list-display">
+            <p className="bit">
+              <span class="outline">🎂</span>&emsp;{parseDate(pet.birthday)}
+            </p>
+            <p className="bit">
+              <span class="outline">🍖</span>&emsp;{pet.hungerLevel}
+            </p>
+            <p className="bit">
+              <span class="outline">🙂</span>&emsp;{pet.happinessLevel}
+            </p>
+          </div>
+          <p className="link">
+            <Link to={`/${pet.id}`}>Select Pet</Link>
+          </p>
+        </article>
+      </div>
     )
   })
 }
