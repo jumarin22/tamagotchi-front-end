@@ -20,18 +20,22 @@ export function ShowPetList() {
 
   return petResults.map(function (pet) {
     return (
-      <div class="egg" key={pet.id} onClick={() => history.push(`/${pet.id}`)}>
+      <div
+        className="egg"
+        key={pet.id}
+        onClick={() => history.push(`/${pet.id}`)}
+      >
         <article>
           <h2 className="list-name">{pet.name}</h2>
           <div className="list-display">
             <p className="bit">
-              <span class="outline">🎂</span>&emsp;{parseDate(pet.birthday)}
+              <span className="outline">🎂</span>&emsp;{parseDate(pet.birthday)}
             </p>
             <p className="bit">
-              <span class="outline">🍖</span>&emsp;{pet.hungerLevel}
+              <span className="outline">🍖</span>&emsp;{pet.hungerLevel}
             </p>
             <p className="bit">
-              <span class="outline">🙂</span>&emsp;{pet.happinessLevel}
+              <span className="outline">🙂</span>&emsp;{pet.happinessLevel}
             </p>
           </div>
           <p className="link">
