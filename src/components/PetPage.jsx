@@ -32,7 +32,7 @@ export function PetPage() {
     }
 
     loadOnePet()
-  }, [petItem])
+  }, [params.id])
 
   async function feedPet() {
     const response = await axios.post(
@@ -80,15 +80,17 @@ export function PetPage() {
       <div className="display">
         <div className="pet-info">
           <p>
-            <span class="grey">Birthday:</span> {parseDate(petItem.birthday)}
+            <span className="grey">Birthday:</span>{' '}
+            {parseDate(petItem.birthday)}
           </p>
           <p>
             {' '}
-            <span class="grey">Hunger Level:</span> {petItem.hungerLevel}
+            <span className="grey">Hunger Level:</span> {petItem.hungerLevel}
           </p>
           <p>
             {' '}
-            <span class="grey">Happiness Level: </span> {petItem.happinessLevel}
+            <span className="grey">Happiness Level: </span>{' '}
+            {petItem.happinessLevel}
           </p>
         </div>
         <div className="menu">
