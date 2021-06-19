@@ -1,71 +1,70 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useHistory, useParams } from 'react-router'
+import { useHistory, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 export function PetPage() {
   const history = useHistory()
   const [petItem, setPetItem] = useState({
-    id: undefined,
+    id: '',
     name: 'Loading Pet...',
     birthday: '0000-00-00',
-    hungerLevel: -99,
-    happinessLevel: -99,
-    lastInteractedWithDate: '',
-    isDead: false,
+    hungerLevel: '-99',
+    happinessLevel: '-99',
   })
   const params = useParams()
-  const headers = {
-    'Content-Type': 'application/json',
+
+  async function loadPetInfo() {
+    const response = await fetch(
+      `https://tamagotchi-justin.herokuapp.com/api/Pets/${params.id}`
+    )
+
+    if (response.ok) {
+      const json = await response.json()
+      setPetItem(json)
+    }
   }
 
   useEffect(() => {
-    async function loadOnePet() {
-      const response = await axios.get(
-        `https://tamagotchi-justin.herokuapp.com/api/Pets/${params.id}`
-      )
-
-      if (response.status === 200) {
-        setPetItem(response.data)
-      }
-    }
-
-    loadOnePet()
-  }, [params.id])
+    loadPetInfo()
+  }, [petItem])
 
   async function feedPet() {
     const response = await axios.post(
-      `https://tamagotchi-justin.herokuapp.com/api/Pets/${params.id}/feedings`,
-      headers
+      `https://tamagotchi-justin.herokuapp.com/api/Pets/${petItem.id}/feedings`,
+      {}
     )
-    if (response.status === 200) {
+    if (response.ok) {
+      loadPetInfo()
     }
   }
 
   async function playPet() {
     const response = await axios.post(
-      `https://tamagotchi-justin.herokuapp.com/api/Pets/${params.id}/playtimes`,
-      headers
+      `https://tamagotchi-justin.herokuapp.com/api/Pets/${petItem.id}/playtimes`,
+      {}
     )
-    if (response.status === 200) {
+    if (response.ok) {
+      loadPetInfo()
     }
   }
 
   async function scoldPet() {
     const response = await axios.post(
-      `https://tamagotchi-justin.herokuapp.com/api/Pets/${params.id}/scoldings`,
-      headers
+      `https://tamagotchi-justin.herokuapp.com/api/Pets/${petItem.id}/scoldings`,
+      {}
     )
-    if (response.status === 200) {
+    if (response.ok) {
+      loadPetInfo()
     }
   }
 
   async function deletePet() {
     const response = await axios.delete(
-      `https://tamagotchi-justin.herokuapp.com/api/Pets/${params.id}`
+      `https://tamagotchi-justin.herokuapp.com/api/Pets/${petItem.id}`
     )
-    if (response.status === 200) {
+    if (response.ok) {
       history.push('/')
     }
   }
