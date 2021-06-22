@@ -28,14 +28,14 @@ export function PetPage() {
 
   useEffect(() => {
     loadPetInfo()
-  }, [petItem])
+  }, [params.id])
 
   async function feedPet() {
     const response = await axios.post(
       `https://tamagotchi-justin.herokuapp.com/api/Pets/${petItem.id}/feedings`,
       {}
     )
-    if (response.ok) {
+    if (response.status === 200) {
       loadPetInfo()
     }
   }
@@ -45,7 +45,7 @@ export function PetPage() {
       `https://tamagotchi-justin.herokuapp.com/api/Pets/${petItem.id}/playtimes`,
       {}
     )
-    if (response.ok) {
+    if (response.status === 200) {
       loadPetInfo()
     }
   }
@@ -55,7 +55,7 @@ export function PetPage() {
       `https://tamagotchi-justin.herokuapp.com/api/Pets/${petItem.id}/scoldings`,
       {}
     )
-    if (response.ok) {
+    if (response.status === 200) {
       loadPetInfo()
     }
   }
@@ -64,7 +64,7 @@ export function PetPage() {
     const response = await axios.delete(
       `https://tamagotchi-justin.herokuapp.com/api/Pets/${petItem.id}`
     )
-    if (response.ok) {
+    if (response.status === 200) {
       history.push('/')
     }
   }
