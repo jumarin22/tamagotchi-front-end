@@ -25,7 +25,7 @@ export function ShowPetList() {
         key={pet.id}
         onClick={() => history.push(`/${pet.id}`)}
       >
-        <article>
+        <div className="egg-item">
           <h2 className="list-name">{pet.name}</h2>
           <div className="list-display">
             <p className="bit">
@@ -41,7 +41,7 @@ export function ShowPetList() {
           <p className="link">
             <Link to={`/${pet.id}`}>&#8729;&#8729;&#8729;</Link>
           </p>
-        </article>
+        </div>
       </div>
     )
   })

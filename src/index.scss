@@ -78,8 +78,7 @@ nav a:visited {
   justify-content: center;
 }
 
-article {
-  display: flex wrap;
+.egg-item {
   align-self: center;
   word-wrap: break-word;
   max-width: 75%;
@@ -108,7 +107,6 @@ p.link {
 .list-display {
   background-color: hsl(0, 0%, 75%);
   border-radius: 1rem;
-  display: flex wrap;
   border-style: solid;
   border-width: 0.3rem;
   border-top-color: hsl(16, 93%, 33%);
