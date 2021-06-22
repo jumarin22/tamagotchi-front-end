@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 export function PetPage() {
   const history = useHistory()
   const [petItem, setPetItem] = useState({
-    id: '',
+    id: undefined,
     name: 'Loading Pet...',
     birthday: '0000-00-00',
     hungerLevel: '-99',
@@ -68,7 +68,7 @@ export function PetPage() {
       history.push('/')
     }
   }
-  //
+
   function parseDate(birthday) {
     return birthday.substr(0, 10)
   }
