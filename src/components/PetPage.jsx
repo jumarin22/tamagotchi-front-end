@@ -68,7 +68,7 @@ export function PetPage() {
       history.push('/')
     }
   }
-
+  //
   function parseDate(birthday) {
     return birthday.substr(0, 10)
   }
